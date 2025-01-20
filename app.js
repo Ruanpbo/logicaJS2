@@ -3,3 +3,7 @@ titulo.innerHTML = 'Jogo do numero secreto';
 
 let paragrafo = document.querySelector('p');
 paragrafo.innerHTML = 'Escolha um numero entre 1 e 10';
+
+function verificarChute(){
+    
+}
