@@ -1,3 +1,5 @@
+let listaDeNumeroSorteado = [];
+let numeroLimite = 10;
 let numeroSecreto = nAleatorio();
 
 function textos(tag, texto){
@@ -13,7 +15,19 @@ function textos(tag, texto){
     initmsg();
 
 function nAleatorio(){
-    return parseInt(Math.random() * 10 + 1);
+    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
+    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
+
+    if (quantidadeDeElementosNaLista == numeroLimite) {
+        listaDeNumerosSorteados = [];
+    }
+    if (listaDeNumerosSorteados.includes(numeroEscolhido)) {
+        return gerarNumeroAleatorio();
+    } else {
+        listaDeNumerosSorteados.push(numeroEscolhido);
+        console.log(listaDeNumerosSorteados)
+        return numeroEscolhido;
+    }    
 }
 
 let msg;
